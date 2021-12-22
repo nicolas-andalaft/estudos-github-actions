@@ -8,7 +8,7 @@ async function run() {
     const TENOR_TOKEN = core.getInput('TENOR_TOKEN');
     
     const randomPos = Math.round(Math.random() * 10);
-    const url = `https://api.tenor.com/v1/search?q=Thank%20you&pos=${randomPos}&limit=1&media_filter=minimal&contentfilter=high&key=${TENOR_TOKEN}`;
+    const url = `https://g.tenor.com/v1/random?q=Thank%20you&limit=1&media_filter=minimal&contentfilter=high&key=${TENOR_TOKEN}`;
     var media = undefined;
     
     try {
