@@ -1,3 +1,3 @@
-import { run as thank_you } from './thank-you-action';
+const thank_you = require('./thank-you-action');
 
-thank_you();
+thank_you.action();
