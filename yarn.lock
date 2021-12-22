@@ -151,6 +151,11 @@
   dependencies:
     "fetch-blob" "^3.1.2"
 
+"http@^0.0.1-security":
+  "integrity" "sha512-RnDvP10Ty9FxqOtPZuxtebw1j4L/WiqNMDtuc1YMH1XQm5TgDRaR1G9u8upL6KD1bXHSp9eSXo/ED+8Q7FAr+g=="
+  "resolved" "https://registry.npmjs.org/http/-/http-0.0.1-security.tgz"
+  "version" "0.0.1-security"
+
 "is-plain-object@^5.0.0":
   "integrity" "sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q=="
   "resolved" "https://registry.npmjs.org/is-plain-object/-/is-plain-object-5.0.0.tgz"

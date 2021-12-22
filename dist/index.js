@@ -12552,6 +12552,14 @@ module.exports = require("node:fs");
 
 /***/ }),
 
+/***/ 8849:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("node:http");
+
+/***/ }),
+
 /***/ 9411:
 /***/ ((module) => {
 
@@ -13082,7 +13090,7 @@ return new B(c,{type:"multipart/form-data; boundary="+b})}
 
 /***/ }),
 
-/***/ 7580:
+/***/ 4525:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
 
 "use strict";
@@ -13100,8 +13108,8 @@ __nccwpck_require__.d(__webpack_exports__, {
   "isRedirect": () => (/* reexport */ isRedirect)
 });
 
-;// CONCATENATED MODULE: external "node:http"
-const external_node_http_namespaceObject = require("node:http");
+// EXTERNAL MODULE: external "node:http"
+var external_node_http_ = __nccwpck_require__(8849);
 ;// CONCATENATED MODULE: external "node:https"
 const external_node_https_namespaceObject = require("node:https");
 ;// CONCATENATED MODULE: external "node:zlib"
@@ -13679,8 +13687,8 @@ const writeToStream = (dest, {body}) => {
 
 
 
-const validateHeaderName = typeof external_node_http_namespaceObject.validateHeaderName === 'function' ?
-	external_node_http_namespaceObject.validateHeaderName :
+const validateHeaderName = typeof external_node_http_.validateHeaderName === 'function' ?
+	external_node_http_.validateHeaderName :
 	name => {
 		if (!/^[\^`\-\w!#$%&'*+.|~]+$/.test(name)) {
 			const error = new TypeError(`Header name must be a valid HTTP token [${name}]`);
@@ -13689,8 +13697,8 @@ const validateHeaderName = typeof external_node_http_namespaceObject.validateHea
 		}
 	};
 
-const validateHeaderValue = typeof external_node_http_namespaceObject.validateHeaderValue === 'function' ?
-	external_node_http_namespaceObject.validateHeaderValue :
+const validateHeaderValue = typeof external_node_http_.validateHeaderValue === 'function' ?
+	external_node_http_.validateHeaderValue :
 	(name, value) => {
 		if (/[^\t\u0020-\u007E\u0080-\u00FF]/.test(value)) {
 			const error = new TypeError(`Invalid character in header content ["${name}"]`);
@@ -14815,7 +14823,7 @@ async function fetch(url, options_) {
 		}
 
 		// Wrap http.request into fetch
-		const send = (parsedURL.protocol === 'https:' ? external_node_https_namespaceObject : external_node_http_namespaceObject).request;
+		const send = (parsedURL.protocol === 'https:' ? external_node_https_namespaceObject : external_node_http_).request;
 		const {signal} = request;
 		let response = null;
 
@@ -15251,7 +15259,8 @@ module.exports = JSON.parse('[[[0,44],"disallowed_STD3_valid"],[[45,46],"valid"]
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-const fetch = __nccwpck_require__(7580);
+const fetch = __nccwpck_require__(4525);
+const http = __nccwpck_require__(8849);
 const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 

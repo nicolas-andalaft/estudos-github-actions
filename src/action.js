@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const http = require('node:http');
 const core = require('@actions/core');
 const github = require('@actions/github');
 
