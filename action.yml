@@ -1,0 +1,15 @@
+name: 'Thank You Action'
+description: 'Sends a Thank You message to new pull requests'
+author: 'Nicolas Andalaft'
+
+inputs:
+  GITHUB_TOKEN: 
+    description: 'Github token'
+    required: true
+  TENOR_TOKEN:
+    description: 'Tenor API token'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
