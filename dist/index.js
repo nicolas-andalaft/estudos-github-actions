@@ -11486,7 +11486,6 @@ async function run() {
     const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
     const TENOR_TOKEN = core.getInput('TENOR_TOKEN');
     
-    const randomPos = Math.round(Math.random() * 10);
     const url = `https://g.tenor.com/v1/random?q=Thank%20you&limit=1&media_filter=minimal&contentfilter=high&key=${TENOR_TOKEN}`;
     var media = undefined;
     
