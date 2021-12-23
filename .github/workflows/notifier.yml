@@ -1,0 +1,17 @@
+name: Notifier
+
+on: [ push, pull_request ]
+
+jobs:
+
+  notifyTelegram:
+    runs-on: ubuntu-latest
+    steps:
+    - name: send custom message
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: |
+          [${{ github.repository }}]
+          ${{ github.actor }} fez um ${{ github.event_name }} na branch ${{ github.ref_name }}
