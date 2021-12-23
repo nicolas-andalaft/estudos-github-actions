@@ -14,4 +14,4 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
           [${{ github.repository }}]
-          Um ${{ github.event_name }} foi executado na branch ${{ steps.branch-name.outputs.current_branch }}
+          Um ${{ github.event_name }} foi executado na branch ${{ github.ref_name }}
